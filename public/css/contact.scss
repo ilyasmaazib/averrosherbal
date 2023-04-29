@@ -1,0 +1,76 @@
+.contact{
+    background-image: url(../assets/img/konsultasi-family.png);
+    background-size: cover;
+    height: 546px;
+    background-position: center; 
+    background-repeat: no-repeat;
+    width: 100%;
+
+    .company-head{
+        float: right;
+        min-height: 500px;
+        h3,p{
+            font-weight: 500;
+        }
+    }
+}
+.contact-body{
+    .header-contact{
+        
+        span{
+            color: $primarycolor;
+            font-weight: 800;
+        }
+    }
+    .contact-card{
+        border: 5px solid $primarycolor;
+        border-radius: 30px 30px 30px 30px;
+        .card-header{
+            border-radius: 20px 20px 0 0;
+            background-color: $primarycolor;
+        }
+        .card-body{
+            background-color: white;
+            border-radius: 0 0 30px 30px;
+
+            .form-group{
+                margin: 1.5em 0;
+
+                .input{
+                    border-radius: 10px;
+                    height: 47px;
+                    border: 2px solid $primarycolor;
+                }
+
+                .option{
+                    border-radius: 10px;
+                }
+            }
+            
+            button{
+                @include tombol;
+                border: 2px solid $primarycolor;
+
+                &:hover{
+                    border: 2px solid $primarycolor;
+                    color: $primarycolor;
+                }
+            }
+        }
+    }
+
+    
+}
+.konsultan{
+    .section-title{
+        h3{
+            color: $primarycolor;
+        }
+
+    }
+}
+
+.profil{
+    @include tombol;
+    cursor: pointer;
+}

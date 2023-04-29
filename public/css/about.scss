@@ -1,0 +1,77 @@
+// about
+.about{
+    margin-top: 5em;
+    h2{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 42px;
+    }
+    h3{
+        color: $primarycolor;
+        font-weight: 700;
+        font-size: 42px;
+    }
+}
+.about{
+    margin-top: auto;
+    background-image: url(../assets/img/sc1.svg);
+    background-size: cover;
+    height: 768px;
+    background-position: center; 
+    background-repeat: no-repeat;
+    width: 100%;
+    
+    h2{
+        font-size: 64px;
+    }
+    .company-head{
+        float: right;
+        margin-top: 242px;
+        h3,p{
+            font-weight: 500;
+        }
+    }
+}
+// visi misi
+.visi-misi{
+    .visi-misi-header{
+        h1{
+            font-weight: 800;
+            color: $primarycolor;
+        }
+    }
+
+    .card-visi{
+        border-radius: 30px;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../assets/img/herb3.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        .card-title{
+            color: white;
+        }
+        .card-body{
+            h1,p{
+                color: white;
+            }
+        }
+    }
+
+    .card-misi{
+        border-radius: 30px;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../assets/img/herb4.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        .card-title{
+            color: white;
+        }
+        .card-body{
+            h1,p{
+                color: white;
+            }
+        }
+    }
+}

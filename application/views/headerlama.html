@@ -1,0 +1,118 @@
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="<?=base_url('dashboard')?>" class="brand-link">
+      <img src="<?=base_url()?>public/admin/dist/img/logo.png" class="brand-image img-circle elevation-3">
+      <span class="brand-text font-weight-light">Admin | Averros</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+            <?php
+              if(file_exists("./public/img/user/" . user_login()->foto)){
+                $fotoUrl = base_url("/public/img/user/" . user_login()->foto);
+              }else{
+                $fotoUrl = base_url("/public/img/user/" . user_login()->foto);
+              }
+            ?>
+              <img class="img-circle elevation-2" src="<?=$fotoUrl?>" alt="User Image">
+            </div>
+          <div class="info">
+            <a  class="d-blok"><?= user_login()->nama_user ?></a></br>
+          </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item has-treeview">
+            <a href="<?=base_url('dashboard')?>" class="nav-link ">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+              </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-user-alt"></i>
+              <p>
+                User
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?=base_url('user')?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>lihat Profile</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?=site_url('user/update')?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Edit Profile</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?=site_url('user/add')?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah User</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-shopping-bag"></i>
+              <p>
+                Product
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?=base_url('catalog')?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>lihat Product</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-shopping-bag"></i>
+              <p>
+                Blog
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?=base_url('blog')?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>lihat Product</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="<?= site_url('auth/logout') ?>" class="nav-link">
+              <i class="nav-icon fa fa-sign-out"></i>
+              <p>
+                Log Out
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
